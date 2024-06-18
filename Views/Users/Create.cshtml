@@ -1,0 +1,48 @@
+@model GaelPic.Models.User
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<link rel="stylesheet" href="~/css/create-geral.css" asp-append-version="true" />
+
+<h1>Create</h1>
+
+<h4>User</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fone" class="control-label"></label>
+                <input asp-for="Fone" class="form-control" />
+                <span asp-validation-for="Fone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div id="buttons" class="form-group d-flex justify-content-center">
+                <a class="btn btn-secondary" asp-action="Index">Voltar para Lista</a>
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

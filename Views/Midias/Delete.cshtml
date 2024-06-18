@@ -1,0 +1,51 @@
+@model GaelPic.Models.Midia
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<link rel="stylesheet" href="~/css/delete.css" asp-append-version="true" />
+<h1>Delete</h1>
+
+<h3>Você tem certeza que deseja deletar isso?</h3>
+<div>
+    <h4>Midia</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Link)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Link)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.User)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.User.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TypeMidia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TypeMidia.Description)
+        </dd>
+    </dl>
+    
+   <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <a asp-action="Index" class="action-links">Voltar para Lista</a>
+        <input type="submit" value="Delete" class="btn btn-danger" />
+    </form>
+</div>

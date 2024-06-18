@@ -1,0 +1,87 @@
+:root {
+    --cor-primaria: #0004ffe7; /* Verde */
+    --cor-secundaria: #6c757d; /* Cinza */
+    --cor-perigo: #dc3545; /* Vermelho */
+    --cor-texto: black;
+}
+
+body {
+    text-align: center;
+    color: var(--cor-primaria);
+}
+
+h1 {
+    font-size: 45px;
+    color: var(--cor-primaria);
+}
+
+h3 {
+    font-size: 25px;
+    color: var(--cor-texto);
+}
+
+h4 {
+    font-size: 30px;
+}
+
+.row {
+    text-align: left; /* Alinhar texto à esquerda */
+}
+
+/* Estilo para a Descrição de Lista Horizontal */
+dl.row dt {
+    font-weight: bold;
+    color: var(--cor-secundaria);
+}
+
+dl.row dd {
+    margin-left: 20px;
+    font-size: 20px;
+    color: var(--cor-texto);
+}
+
+/* Estilos para os links */
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    margin: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para os botões */
+form input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: var(--cor-perigo);
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #c82333; /* Vermelho mais escuro */
+}
+
+.action-links {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: var(--cor-secundaria);
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.action-links:hover {
+    color: white;
+    text-decoration: none;
+}

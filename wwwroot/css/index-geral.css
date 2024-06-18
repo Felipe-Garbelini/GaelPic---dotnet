@@ -1,0 +1,67 @@
+/* Definindo as cores */
+:root {
+    --cor-primaria: #0004ffe7;
+    
+}
+
+/* Estilizando o cabeçalho */
+h1 {
+    color: var(--cor-primaria);
+    text-align: center;
+    font-size: 50px;
+}
+
+/* Estilizando links */
+a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: darken(var(--cor-primaria), 10%);
+}
+
+
+/* Estilizando a tabela */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.164);
+}
+
+/* Estilizando cabeçalho da tabela */
+.table th {
+    background-color: var(--cor-primaria);
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+/* Estilizando células da tabela */
+.table td {
+    padding: 20px;
+}
+
+
+td a{
+    width: 100px;
+    margin-right: 60px;
+}
+
+#link_add{
+    text-align: center;
+}
+
+#midias a{
+    width: 90px;
+    margin-right: 30px;
+}
+
+#type_midias a{
+    margin-left: 80px;
+}
+

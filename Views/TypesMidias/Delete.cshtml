@@ -1,0 +1,27 @@
+@model GaelPic.Models.TypeMidia
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<link rel="stylesheet" href="~/css/delete.css" asp-append-version="true" />
+<h1>Delete</h1>
+
+<h3>Você tem certeza que deseja deletar isso?</h3>
+<div>
+    <h4>TypeMidia</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <a asp-action="Index" class="action-links">Voltar para Lista</a>
+        <input type="submit" value="Delete" class="btn btn-danger" />
+    </form>
+</div>

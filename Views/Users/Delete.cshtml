@@ -1,0 +1,46 @@
+@model GaelPic.Models.User
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<link rel="stylesheet" href="~/css/delete.css" asp-append-version="true" />
+
+<h1>Delete</h1>
+
+<h3>Você tem certeza que deseja deletar esse usuário?</h3>
+<div>
+    <h4>Usuário</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Fone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Fone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <a asp-action="Index" class="action-links">Voltar para Lista</a>
+        <input type="submit" value="Delete" class="btn btn-danger" />
+    </form>
+</div>

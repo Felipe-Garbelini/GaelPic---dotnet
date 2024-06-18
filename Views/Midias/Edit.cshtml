@@ -1,0 +1,53 @@
+@model GaelPic.Models.Midia
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<link rel="stylesheet" href="~/css/create-geral.css" asp-append-version="true" />
+
+<h1>Edit</h1>
+
+<h4>Midia</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group inputs">
+                <label asp-for="UserId" class="control-label">Id do Usuário</label>
+                <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>
+            <div class="form-group inputs">
+                <label asp-for="TypeMidiaId" class="control-label">Id do Tipo de Midia</label>
+                <select asp-for="TypeMidiaId" class="form-control" asp-items="ViewBag.TypeMidiaId"></select>
+                <span asp-validation-for="TypeMidiaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Link" class="control-label">Link</label>
+                <input asp-for="Link" class="form-control" />
+                <span asp-validation-for="Link" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group d-flex justify-content-center">
+                <a asp-action="Index" class="btn btn-secondary">Voltar para lista</a>
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

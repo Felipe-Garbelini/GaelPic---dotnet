@@ -1,0 +1,24 @@
+@model GaelPic.Models.TypeMidia
+
+@{
+    ViewData["Title"] = "Details";
+}
+<link rel="stylesheet" href="~/css/details.css" asp-append-version="true" />
+<h1>Details</h1>
+
+<div>
+    <h4>TypeMidia</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+</div>
+<div class=" action d-flex justify-content-center">
+    <a class="action-links" asp-action="Index">Voltar para lista</a>
+    <a class="action-edit" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a>
+</div>

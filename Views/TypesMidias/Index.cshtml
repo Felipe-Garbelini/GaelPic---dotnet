@@ -1,0 +1,37 @@
+@model IEnumerable<GaelPic.Models.TypeMidia>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link rel="stylesheet" href="~/css/index-geral.css" asp-append-version="true" />
+
+<h1>Tipos de Arquivos</h1>
+
+<p class="d-flex flex-row-reverse">
+    <a class="btn btn-primary p-2" asp-action="Create">Criar Novo Tipo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td id='type_midias'>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Editar</a> 
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-secondary">Detalhes</a> 
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
